@@ -1,4 +1,4 @@
-{% set version = '1.6.2' %}
+{% set version = "1.6.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ore_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ore/ore_{{ version }}.tar.gz
-  sha256: f5002915e91b410e3e5c8827da8a54b42fce76895c102c3794fc95fa248d3fd0
+  sha256: 7b4e7d807d2d21c8f0fca5f1ca467697935f7b48911d2ea574f3c19cd5e006ee
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
   skip: true  # [win32]
 
   rpaths:
