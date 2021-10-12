@@ -1,4 +1,4 @@
-{% set version = '1.6.3' %}
+{% set version = "1.7.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ore_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ore/ore_{{ version }}.tar.gz
-  sha256: 7b4e7d807d2d21c8f0fca5f1ca467697935f7b48911d2ea574f3c19cd5e006ee
+  sha256: 2f71d3fb0466d84d6237201ef5b1eb0d1fe7baee1ec0b3f3055947ebd7d90b62
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -47,12 +47,10 @@ test:
 about:
   home: https://github.com/jonclayden/ore
   license: BSD_3_clause
-  summary: Provides an alternative to R's built-in functionality for handling regular expressions,
-    based on the Onigmo library. Offers first-class compiled regex objects, partial
-    matching and function-based substitutions, amongst other features.
+  summary: Provides an alternative to R's built-in functionality for handling regular expressions, based on the Onigmo library. Offers first-class compiled regex objects, partial matching and function-based substitutions, amongst other features.
   license_family: BSD
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
     - LICENCE
 
 extra:
