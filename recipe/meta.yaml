@@ -1,4 +1,4 @@
-{% set version = "1.7.0" %}
+{% set version = "1.7.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ore_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ore/ore_{{ version }}.tar.gz
-  sha256: 2f71d3fb0466d84d6237201ef5b1eb0d1fe7baee1ec0b3f3055947ebd7d90b62
+  sha256: 851323539656baca962a003b724669524145e8fab813bab42594f41060c94567
 
 build:
   merge_build_host: true  # [win]
