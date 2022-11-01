@@ -33,6 +33,7 @@ requirements:
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -46,7 +47,7 @@ test:
 
 about:
   home: https://github.com/jonclayden/ore
-  license: BSD_3_clause
+  license: BSD-3-Clause
   summary: Provides an alternative to R's built-in functionality for handling regular expressions, based on the Onigmo library. Offers first-class compiled regex objects, partial matching and function-based substitutions, amongst other features.
   license_family: BSD
   license_file:
