@@ -3,7 +3,7 @@ About r-ore
 
 Home: https://github.com/jonclayden/ore
 
-Package license: BSD_3_clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ore-feedstock/blob/main/LICENSE.txt)
 

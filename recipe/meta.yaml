@@ -1,4 +1,4 @@
-{% set version = "1.7.1.1" %}
+{% set version = "1.7.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ore_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ore/ore_{{ version }}.tar.gz
-  sha256: 851323539656baca962a003b724669524145e8fab813bab42594f41060c94567
+  sha256: efc9850da514c79d69eec6fb3df1169a6302dbbbbc79e828d28b849eba018580
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -33,6 +33,7 @@ requirements:
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -46,7 +47,7 @@ test:
 
 about:
   home: https://github.com/jonclayden/ore
-  license: BSD_3_clause
+  license: BSD-3-Clause
   summary: Provides an alternative to R's built-in functionality for handling regular expressions, based on the Onigmo library. Offers first-class compiled regex objects, partial matching and function-based substitutions, amongst other features.
   license_family: BSD
   license_file:
