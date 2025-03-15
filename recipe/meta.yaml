@@ -1,4 +1,4 @@
-{% set version = "1.7.4.1" %}
+{% set version = "1.7.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ore_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ore/ore_{{ version }}.tar.gz
-  sha256: 12f46d7645b572673d5f39b9bd90ff824c50c95de77229e88935ab25bddc5e05
+  sha256: 7f5d4499cef7eccc810ba66daf751b746d0eaf9fe7aae5ee7862cbc6a2286985
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
